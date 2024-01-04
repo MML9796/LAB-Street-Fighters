@@ -40,8 +40,12 @@ def top_ratio_medio_personajes(partidas:List[Partida],n:int)->List[str]:
     return [nombre for nombre,_ in ratio]
 
 def enemigos_mas_debiles(partidas:List[Partida],personaje:str):
-    dicc=Counter(i.pj1 for i in partidas if personaje==i.ganador and i.pj1!=personaje)
-    +Counter(i.pj2 for i in partidas if personaje==i.ganador and i.pj2!=personaje)
+    dicc=defaultdict(int)
+    for i in partidas:
+        if personaje==i.ganador and i.pj1!=personaje:
+            dicc[i.pj1]+=1
+        if personaje==i.ganador and i.pj2!=personaje:
+            dicc[i.pj2]+=1
     res=defaultdict(list)
     for nombre,victoria in dicc.items():
         res[victoria].append(nombre)

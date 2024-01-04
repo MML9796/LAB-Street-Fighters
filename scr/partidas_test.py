@@ -29,6 +29,6 @@ if __name__=='__main__':
     #test_lee_partidas(datos)
     #test_victoria_mas_rapida(datos)
     #test_top_ratio_medio_personajes(datos,3)
-    test_enemigos_mas_debiles(datos,'Ken')
+    #test_enemigos_mas_debiles(datos,'Ken')
     test_movimientos_comunes(datos,'Ryu','Ken')
     #test_dia_mas_combo_finish(datos)

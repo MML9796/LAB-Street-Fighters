@@ -12,5 +12,5 @@ def parser_booleano(cadena):
     return res 
 
 def parser_cadena(cadena):
-    lista=[e.strip() for e in cadena.split(',')]
+    lista=[i.strip() for i in cadena.split(',')]
     return lista 
